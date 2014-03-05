@@ -130,5 +130,6 @@
 	</issueManagement>
 	<ciManagement>
 		<system>Travis </system>
+		<url>https://travis-ci.org/sriharisahu/beechu</url>
 	</ciManagement>
 </project>
