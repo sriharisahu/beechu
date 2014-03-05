@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.shreesoft.beechu</groupId>
-	<artifactId>beechu</artifactId>
+	<artifactId>Beechu</artifactId>
 	<packaging>war</packaging>
 	<version>0.1-SNAPSHOT</version>
 	<name>Beechu</name>
@@ -115,4 +115,20 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<organization>
+		<name>Shree Soft Solutions</name>
+		<url>http://shreesoftsolutions.com</url>
+	</organization>
+	<scm>
+		<url>git@github.com:sriharisahu/beechu.git</url>
+		<connection>git</connection>
+		<developerConnection>Srihari Sankar Sahu</developerConnection>
+	</scm>
+	<issueManagement>
+		<url>https://github.com/sriharisahu/beechu/issues</url>
+		<system>Git Hub Issues</system>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis </system>
+	</ciManagement>
 </project>
