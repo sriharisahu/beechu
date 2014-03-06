@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.shreesoft.beechu</groupId>
 	<artifactId>Beechu</artifactId>
@@ -7,8 +7,17 @@
 	<version>0.1-SNAPSHOT</version>
 	<name>Beechu</name>
 	<url>http://github.com/sriharisahu/beechu</url>
-
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.webflow</groupId>
+			<artifactId>spring-webflow</artifactId>
+			<version>2.3.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-servlet-api</artifactId>
@@ -68,46 +77,36 @@
 						<target>1.7</target>
 					</configuration>
 				</plugin>
-				<!--
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>license-maven-plugin</artifactId>
-					<version>1.6</version>
-					<executions>
-						<execution>
-							<id>download-licenses</id>
-							<goals>
-								<goal>download-licenses</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				-->
+				<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>license-maven-plugin</artifactId> 
+					<version>1.6</version> <executions> <execution> <id>download-licenses</id> 
+					<goals> <goal>download-licenses</goal> </goals> </execution> </executions> 
+					</plugin> -->
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
-					<artifactId>tomcat8-maven-plugin</artifactId>
-					<version>2.0</version>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
 					<configuration>
-						<url>http://localhost:9090/text</url>
+						<url>http://localhost:9090/manager/text</url>
 						<server>TomcatServer</server>
 						<!-- http port -->
-						<!--port>9090</port-->
-						<!-- application path always starts with /-->
+						<port>9090</port>
+						<!-- application path always starts with / -->
 						<path>/</path>
 						<!-- optionnal path to a context file -->
 						<contextFile/>
 						<!-- optionnal system propoerties you want to add -->
 						<systemProperties>
-							<appserver.base/>
-							<appserver.home/>
-							<derby.system.home/>
-							<java.io.tmpdir/>
+							<appserver.base />
+							<appserver.home />
+							<derby.system.home />
+							<java.io.tmpdir />
 						</systemProperties>
 						<!-- if you want to use test dependencies rather than only runtime -->
 						<useTestClasspath>false</useTestClasspath>
-						<!-- optionnal if you want to add some extra directories in the class loader -->
+						<!-- optionnal if you want to add some extra directories in the class 
+							loader -->
 						<additionalClasspathDirs>
-							<additionalClasspathDir/>
+							<additionalClasspathDir />
 						</additionalClasspathDirs>
 					</configuration>
 				</plugin>
@@ -115,6 +114,9 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<organization>
 		<name>Shree Soft Solutions</name>
 		<url>http://shreesoftsolutions.com</url>
@@ -132,4 +134,5 @@
 		<system>Travis </system>
 		<url>https://travis-ci.org/sriharisahu/beechu</url>
 	</ciManagement>
+	<inceptionYear>2014</inceptionYear>
 </project>
