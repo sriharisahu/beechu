@@ -7,6 +7,9 @@
 	<version>0.1-SNAPSHOT</version>
 	<name>Beechu</name>
 	<url>http://github.com/sriharisahu/beechu</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.webflow</groupId>
@@ -65,7 +68,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<finalName>${project.name}</finalName>
 		<pluginManagement>
@@ -110,7 +112,6 @@
 						</additionalClasspathDirs>
 					</configuration>
 				</plugin>
-
 			</plugins>
 		</pluginManagement>
 	</build>
