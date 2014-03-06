@@ -39,11 +39,6 @@ public class Login extends HttpServlet {
 		User user = new User();
 		user.setUserName(request.getParameter(Constants.USER_NAME));
 		user.setPassWord(request.getParameter(Constants.PASSWORD));
-		System.out.println(user.toString());
-//		if(user.getUserName().equalsIgnoreCase("admin")&&user.getPassWord().equalsIgnoreCase("admin")){
-//			response.sendRedirect("/home");
-//			System.out.println("Logged in");
-//		}
 	}
 
 	/**
